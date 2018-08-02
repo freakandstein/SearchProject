@@ -157,8 +157,8 @@ class FilterViewController: BaseViewController<FilterPresenter>, UITextFieldDele
     }
     
     private func initXIB() {
-        goldMerchant = Bundle.main.loadNibNamed("CancelableButtonWidget", owner: self, options: nil)?.first! as! CancelableButtonWidget
-        official = Bundle.main.loadNibNamed("CancelableButtonWidget", owner: self, options: nil)?.first! as! CancelableButtonWidget
+        goldMerchant = (Bundle.main.loadNibNamed("CancelableButtonWidget", owner: self, options: nil)?.first! as! CancelableButtonWidget)
+        official = (Bundle.main.loadNibNamed("CancelableButtonWidget", owner: self, options: nil)?.first! as! CancelableButtonWidget)
         goldMerchant?.click = {(view) in self.containerShopType.removeArrangedSubview(self.goldMerchant!)}
         official?.click = {(view) in self.containerShopType.removeArrangedSubview(self.official!)}
     }

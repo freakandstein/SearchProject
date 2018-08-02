@@ -9,7 +9,7 @@
 import Foundation
 
 class SearchPresenter: BasePresenter<SearchDelegate>{
-    
+    // Mark: Search
     func search(params: Params){
         view.taskDidBegin()
         Api.requestSearch(params: params, completion: { (items) in

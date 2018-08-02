@@ -11,11 +11,13 @@ import UIKit
 
 class CancelableButtonWidget: UIView{
     
-    typealias Action = (CancelableButtonWidget) -> Void
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var ivCancel: UIImageView!
+    
+    typealias Action = (CancelableButtonWidget) -> Void
     var click: Action?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         view.layer.borderWidth = 1

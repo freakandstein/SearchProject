@@ -43,9 +43,7 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = listItem[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemViewCell", for: indexPath) as! ItemViewCell
-        cell.ivItem.kf.setImage(with: URL(string: item.imageUri))
-        cell.lblPrice.text = item.price
-        cell.lblTitle.text = item.name
+        setItemList(cell: cell, item: item)
         loadMore(indexPath: indexPath)
         return cell
     }
@@ -101,6 +99,12 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
             Params.instance().start = listItem.count.description
             presenter.search(params: Params.instance())
         }
+    }
+    
+    private func setItemList(cell: ItemViewCell, item: ItemModel) {
+        cell.ivItem.kf.setImage(with: URL(string: item.imageUri))
+        cell.lblPrice.text = item.price
+        cell.lblTitle.text = item.name
     }
     
     @IBAction func onFilterClicked(_ sender: Any) {

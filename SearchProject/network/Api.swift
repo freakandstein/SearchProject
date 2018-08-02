@@ -11,7 +11,7 @@ import Moya
 
 class Api {
     static let BASE_URL = "https://ace.tokopedia.com/"
-    static let provider = MoyaProvider<ApiProvider>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    static let provider = MoyaProvider<ApiProvider>()
     
     // Mark : Search
     static func requestSearch(params: Params, completion: @escaping ([ItemModel]) -> (), failure: @escaping (Error) -> ()) {
