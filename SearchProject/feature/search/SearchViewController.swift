@@ -86,6 +86,7 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     
     @objc func didRefresh() {
         listItem.removeAll()
+        cvItem.reloadData()
         Params.instance().start = 0.description
         presenter.search(params: Params.instance())
     }
