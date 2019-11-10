@@ -1,6 +1,6 @@
-# Mini Project: Search ![CI status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+# Search Project: Search ![CI status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
-Mini Project : Search is a project with feature search that exist in Tokopedia's app.
+Trying to replicate page search with feature search that exist in Tokopedia's app. Sorry if too many boilerplates code. It is for beginners if want to know how to use MVP with Moya
 
 
 ## Third Party
@@ -9,10 +9,7 @@ Mini Project : Search is a project with feature search that exist in Tokopedia's
 * SwiftRangeSlider
 
 ## Patern 
-The project used MVP Pattern. MVP is Model,View and Presenter.
-
-
-
+The project used MVP Pattern. MVP is Model, View and Presenter.
 
 
 ## Contributing
